@@ -1,0 +1,109 @@
+Here’s your **line-by-line rewritten Java code** with **clear explanations** to help you make notes:
+
+---
+
+### 📘 **Java Code with Explanation**
+
+```java
+import java.util.Scanner;    // Imports Scanner class to take input from the user
+import java.util.Arrays;     // Imports Arrays class to use the sort() method
+```
+
+---
+
+```java
+public class DuplicateElement {   // Declares the main class named DuplicateElement
+```
+
+---
+
+```java
+    public static boolean containsDuplicate(int[] nums) {  // Method to check if duplicates exist in the array
+```
+
+```java
+        Arrays.sort(nums);   // Step 1: Sorts the array in ascending order
+```
+
+```java
+        for (int i = 1; i < nums.length; i++) {   // Step 2: Loop starts from index 1 to end
+```
+
+```java
+            if (nums[i] == nums[i - 1]) {   // Step 3: Checks if current element is same as previous
+                return true;               // Step 4: If same, duplicate found → return true
+            }
+        }
+```
+
+```java
+        return false;    // Step 5: No duplicates found in the whole array → return false
+    }
+```
+
+---
+
+```java
+    public static void main(String[] args) {   // Main method – program starts here
+```
+
+```java
+        Scanner scanner = new Scanner(System.in);   // Creates Scanner object to read user input
+```
+
+```java
+        System.out.print("Enter number of elements: ");   // Prompts user to enter array size
+        int n = scanner.nextInt();                        // Stores user input in variable 'n'
+```
+
+```java
+        int[] nums = new int[n];                          // Declares an integer array of size n
+        System.out.println("Enter " + n + " numbers:");   // Prompt to enter array elements
+```
+
+```java
+        for (int i = 0; i < n; i++) {      // Loop to take n numbers as input
+            nums[i] = scanner.nextInt();  // Stores each number in the array
+        }
+```
+
+```java
+        boolean result = containsDuplicate(nums);   // Calls the method and stores result
+```
+
+```java
+        if (result) {
+            System.out.println("Duplicates found.");   // If true, print duplicates found
+        } else {
+            System.out.println("No duplicates found."); // If false, print no duplicates
+        }
+```
+
+```java
+        scanner.close();    // Closes the Scanner object
+    }
+}
+```
+
+---
+
+### 📝 Summary for Notes:
+
+- **Arrays.sort(nums)**: Makes it easy to find duplicates by arranging elements in order.
+- **for loop from i=1**: Prevents out-of-bound errors and compares each element with the one before.
+- **if condition**: Finds duplicates by checking if any two adjacent elements are the same.
+- **Scanner**: Used to take dynamic input from the user.
+- **Return true/false**: Indicates whether duplicates are found.
+
+---
+
+
+
+
+
+
+
+
+
+
+
